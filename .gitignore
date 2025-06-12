@@ -5,6 +5,7 @@ __pycache__/
 
 # Caches
 *.cache
+*.log
 
 # Distribution / packaging
 .Python
@@ -23,10 +24,6 @@ var/
 .installed.cfg
 *.egg
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
 # Virtual environments
 venv/
 env/
@@ -34,33 +31,40 @@ ENV/
 .venv/
 .python-version
 
-# Flask stuff
+# Flask instance folder
 instance/
 .webassets-cache
 
-# PyCharm and VSCode
+# PyCharm & VSCode
 .idea/
 .vscode/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
 # System files
 .DS_Store
 Thumbs.db
 
-# Model & vectorizer
+# Model artifacts
+model/*.pkl
 
-# Uploaded data (if any)
+# Uploaded or temporary data
 uploads/
+*.tmp
+*.bak
 
-# Secrets
-*.env
+# Environment config and secrets
+.env
 *.secret
+secrets.txt
 
-# MBTI Dataset
+# CSV & raw datasets
+data/*.csv
+!data/mbti_traits.json
+!data/mbti_celebrities.json
+!data/mbti_rarity.json
+!data/mbti_funparagraph.json
 
-
-
-
-
+# GitGuardian flag avoidance
+**/SECRET_KEY*
