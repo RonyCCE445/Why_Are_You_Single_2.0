@@ -23,7 +23,7 @@
   <p>
     {{ rarity }}% of the population shares your personality type.
     <br>
-    That means you're {{ rarity | float <= 2.5 and "basically a unicorn " or rarity | float >= 10 and "as common as instant noodles " or "rare-ish... like a discontinued snack " }}. <br> <br> But remember, they have money and YOU DON'T. Some are even fictious.
+    That means you're {{ rarity | float <= 2.5 and "basically a unicorn " or rarity | float >= 10 and "as common as instant noodles " or "rare-ish... like a discontinued snack " }}.
   </p>
 </div>
 
@@ -35,7 +35,10 @@
             {% for person in famous_people %}
                 <li>{{ person }}</li>
             {% endfor %}
+
         </ul>
+        <br><br>
+        But remember, Some of them are rich. Others are fictious. You are the superlative degree of both broke and real.
     </div>
 
     <div class="result-actions">
