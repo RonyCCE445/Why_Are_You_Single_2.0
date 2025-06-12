@@ -38,10 +38,14 @@ class_weight_dict = dict(zip(classes, class_weights))
 print("Class weights:", class_weight_dict)
 
 # --------- Setup model pipeline ---------
+from sklearn.svm import LinearSVC
+
+# Inside your pipeline:
 pipeline = Pipeline([
     ('tfidf', TfidfVectorizer(ngram_range=(1, 2), max_features=10000)),
-    ('clf', LinearSVC(class_weight=class_weight_dict, max_iter=10000)),
+    ('clf', LinearSVC(class_weight=class_weight_dict, max_iter=10000, dual='auto')),
 ])
+
 
 # --------- Cross-validation for evaluation ---------
 skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
