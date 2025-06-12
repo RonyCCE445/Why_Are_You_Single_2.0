@@ -3,10 +3,10 @@ services:
     name: wais-mbti
     env: python
     plan: free
-    buildCommand: ""  # Leave blank if no build steps (pip is auto-run)
+    buildCommand: ""  
     startCommand: gunicorn app:app
     envVars:
       - key: FLASK_ENV
         value: production
       - key: SECRET_KEY
-        value: 92ee246f8529f6221396907d200d933e8d2a851cc45b7bdb  # Replace with a real secret key
+        value: "92ee246f8529f6221396907d200d933e8d2a851cc45b7bdb"  # Enclose in quotes

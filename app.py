@@ -6,7 +6,7 @@ import os
 from quiz import quiz_questions
 
 app = Flask(__name__)
-import os
+
 app.secret_key = os.getenv("SECRET_KEY")
 
 
