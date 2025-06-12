@@ -19,7 +19,8 @@ def clean_text(text):
     return text
 
 # --------- Load and preprocess dataset ---------
-df = pd.read_csv('data/mbti_1.csv')
+df = pd.read_csv('../data/mbti_1.csv')
+
 print(f"Original dataset size: {len(df)}")
 
 df['posts'] = df['posts'].apply(clean_text)
@@ -65,6 +66,7 @@ print(f"\nAverage CV Accuracy: {np.mean(accuracies):.4f}")
 pipeline.fit(X, y)
 
 # --------- Save model and vectorizer ---------
-joblib.dump(pipeline, 'model/mbti_pipeline.pkl')
+joblib.dump(pipeline, 'mbti_pipeline.pkl')
+
 
 print("Model and vectorizer saved!")

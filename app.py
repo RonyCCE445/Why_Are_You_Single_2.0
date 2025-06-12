@@ -8,7 +8,10 @@ from quiz import quiz_questions
 
 app = Flask(__name__)
 
-app.secret_key = os.getenv("SECRET_KEY")
+from flask import Flask, session
+
+app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY', 'fallback-secret-if-missing')
 
 # Load full pipeline
 pipeline = joblib.load('model/mbti_pipeline.pkl')

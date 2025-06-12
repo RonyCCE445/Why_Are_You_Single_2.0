@@ -61,6 +61,7 @@ uploads/
 # MBTI Dataset
 data/mbti_1.csv
 
+
 .env
 render.yaml  # Only if secrets are inside it
 
