@@ -1,0 +1,332 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #101010; /* Emotional Void */
+    color: #cccccc; /* Ghosted Gray */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 2rem;
+    overflow-x: hidden;
+    background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* Main Layout - Open Game Feel */
+main {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Neon Flicker Title */
+.title, .neon-flicker {
+    font-size: 3.5rem;
+    color: #ffffff; /* Truth Hurts White */
+    text-shadow: 0 0 5px #ffffff, 0 0 15px #d50000;
+    animation: flicker 1.5s infinite alternate;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@keyframes flicker {
+    0%   { opacity: 1; text-shadow: 0 0 5px #ffffff; }
+    50%  { opacity: 0.6; text-shadow: 0 0 10px #666666, 0 0 20px #d50000; }
+    100% { opacity: 1; text-shadow: 0 0 5px #ffffff, 0 0 15px #d50000; }
+}
+
+/* Subtext */
+.subtitle {
+    font-size: 1.2rem;
+    color: #666666; /* Gray Like My Outlook */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Progress Bar */
+.progress-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto 1rem auto;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+#progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #666666;
+    transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+#progress-message {
+    text-align: center;
+    padding-top: 0.5rem;
+    font-style: italic;
+    color: #666666;
+}
+
+/* Question & Prompt */
+.quiz-question {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 2rem;
+    text-shadow: 0 0 6px #ffffff;
+}
+
+.quiz-text {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #cccccc;
+    margin: 1rem 0 2rem 0;
+}
+
+/* Buttons as Game Options */
+.quiz-form,
+.game-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.option-btn {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    min-width: 200px;
+    text-align: center;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+
+
+.option-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #d50000;
+    border-color: #d50000;
+}
+
+
+
+
+/* Generic Buttons */
+button, input[type="submit"] {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #d50000;
+    box-shadow: 0 0 10px #d50000;
+}
+
+
+
+/* Inputs */
+textarea,
+input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #666666;
+    border-radius: 6px;
+    background-color: #1a1a1a;
+    color: #cccccc;
+    margin-bottom: 1rem;
+    resize: none;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #ffffff;
+    text-shadow: 0 0 3px #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Result Sections */
+.result-section {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border-left: 5px solid #d50000;
+    animation: slide-fade 0.4s ease-in;
+}
+
+@keyframes slide-fade {
+    0% { transform: translateX(-10px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Background Doodles */
+.background-doodles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.doodle-text {
+    position: absolute;
+    font-size: 1.1rem;
+    font-family: 'Gloria Hallelujah', 'Caveat', 'Patrick Hand', cursive;
+    opacity: 0.1;
+    text-shadow: 0 0 6px #ffffff, 0 0 12px #ffffff;
+    animation: floatDoodle 6s ease-in-out infinite alternate;
+    white-space: nowrap;
+    transition: transform 0.5s ease;
+    font-weight: bold;
+}
+
+/* Doodle float effect */
+@keyframes floatDoodle {
+    0% { transform: translateY(0) rotate(-10deg); }
+    100% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Snarky Text */
+.snarky-tagline {
+    margin-top: 3rem;
+    color: #666666;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+/* Links */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d50000;
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #d50000;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 5px #d50000;
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d50000;
+    text-shadow: 0 0 5px #d50000;
+}
+
+.toxic-tip-box {
+    background-color: #1a1a1a;
+    border: 3px dashed #d50000;
+    padding: 1rem;
+    margin: 1rem auto 2rem auto;
+    max-width: 600px;
+    color: #ffffff;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.1rem;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 8px #d50000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.toxic-tip-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #ffffff;
+}
+#toxic-title{
+    color: #d50000;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  background-color: #00e676;
+  padding: 0.6rem 1rem;
+  color: #111;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #f50057;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.social-icon {
+  height: 20px;
+  width: 20px;
+}

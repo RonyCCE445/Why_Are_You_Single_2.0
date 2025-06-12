@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Writer Mode - WAIS 2.0{% endblock %}
+
+{% block content %}
+
+<main>
+
+    <div class="neon-flicker">So, You Think You're a Writer?</div>
+    <div class="subtitle">Type a short paragraph about yourself. Be honest (or not, we won’t know).</div>
+
+
+
+    <form method="POST" class="quiz-form">
+        <textarea name="user_intro" rows="6" placeholder="Write about yourself..." required></textarea>
+        <button type="submit">I'm Ready to Face the Truth</button>
+    </form>
+
+    <div class="snarky-tagline">Just remember: we’re judging you either way.</div>
+
+    <div style="text-align:center; margin-top: 2rem;">
+        <a class="option-btn" href="{{ url_for('index') }}">← I changed my mind</a>
+    </div>
+
+</main>
+
+{% endblock %}

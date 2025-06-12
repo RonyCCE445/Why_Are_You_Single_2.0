@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Calculating Your Fate...{% endblock %}
+
+{% block content %}
+<div class="loading-screen">
+    <div class="progress-wrapper">
+        <div id="progress-bar"></div>
+        <p id="progress-message">Booting up sarcasm engine...</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const progress = document.getElementById("progress-bar");
+        const message = document.getElementById("progress-message");
+        const messages = [
+            "Installing existential crisis...",
+            "Analyzing the fake self-introduction...",
+            "Contacting your ex: failed LOL...",
+            "Digging deep into your soul...",
+            "Calculating how single you are..."
+        ];
+        let current = 0;
+        let width = 0;
+
+        const interval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(interval);
+                message.innerText = "Done. Here's the brutal truth.";
+                progress.style.backgroundColor = "#00ff00";
+
+                // Redirect to result after a short delay
+                setTimeout(() => {
+                    window.location.href = "{{ url_for('result') }}";
+                }, 1000);
+            } else {
+                width += 1;
+                progress.style.width = width + "%";
+                if (width % 20 === 0 && current < messages.length) {
+                    message.innerText = messages[current++];
+                }
+                if (width < 40) {
+                    progress.style.backgroundColor = "#666";
+                } else if (width < 80) {
+                    progress.style.backgroundColor = "#ffd700";
+                } else {
+                    progress.style.backgroundColor = "#00ff00";
+                }
+            }
+        }, 50);
+    });
+</script>
+{% endblock %}

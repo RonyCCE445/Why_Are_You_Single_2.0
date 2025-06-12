@@ -1,0 +1,82 @@
+{
+  "INTJ": [
+    "Elon Musk", "Mark Zuckerberg", "Arnold Schwarzenegger",
+    "Walter White (Breaking Bad)", "Professor Moriarty (Sherlock Holmes)", "Severus Snape (Harry Potter)",
+    "Bruce Wayne / Batman", "Gandalf (The Lord of the Rings)"
+  ],
+  "INTP": [
+    "Albert Einstein", "Bill Gates", "Tina Fey",
+    "Neo (The Matrix)", "Abed Nadir (Community)", "Luna Lovegood (Harry Potter)",
+    "Yoda (Star Wars)", "Dexter Morgan (Dexter)"
+  ],
+  "ENTJ": [
+    "Gordon Ramsay", "Steve Jobs", "Harrison Ford",
+    "Miranda Priestly (The Devil Wears Prada)", "Light Yagami (Death Note)", "Harvey Specter (Suits)",
+    "Cersei Lannister (Game of Thrones)", "Frank Underwood (House of Cards)"
+  ],
+  "ENTP": [
+    "Tom Hanks", "Robert Downey Jr.", "Mark Twain",
+    "The Joker (The Dark Knight)", "Tony Stark / Iron Man", "Tyrion Lannister (Game of Thrones)",
+    "Jim Halpert (The Office)", "Rick Sanchez (Rick and Morty)"
+  ],
+  "INFJ": [
+    "Carl Jung", "Benedict Cumberbatch", "Taylor Swift",
+    "Atticus Finch (To Kill a Mockingbird)", "Albus Dumbledore (Harry Potter)", "Amélie Poulain (Amélie)",
+    "Lisa Simpson (The Simpsons)", "Jon Snow (Game of Thrones)"
+  ],
+  "INFP": [
+    "William Shakespeare", "J.K. Rowling", "Johnny Depp",
+    "Frodo Baggins (The Lord of the Rings)", "Anne Shirley (Anne of Green Gables)", 
+    "Bojack Horseman", "Bella Swan (Twilight)"
+  ],
+  "ENFJ": [
+    "Oprah Winfrey", "Barack Obama", "Emma Watson",
+    "Mufasa (The Lion King)", "Morpheus (The Matrix)", "Daenerys Targaryen (Game of Thrones)",
+    "Leslie Knope (Parks and Recreation)", "Glinda (Wicked)"
+  ],
+  "ENFP": [
+    "Robin Williams", "Ellen DeGeneres", "Quentin Tarantino",
+    "Rapunzel (Tangled)", "Poe Dameron (Star Wars)", "Peter Parker / Spider-Man",
+    "Hiccup (How to Train Your Dragon)", "Michael Scott (The Office)"
+  ],
+  "ISTJ": [
+    "Natalie Portman", "George Washington", "Angela Merkel",
+    "Dwight Schrute (The Office)", "Thorin Oakenshield (The Hobbit)", "Inspector Javert (Les Misérables)",
+    "Captain Holt (Brooklyn Nine-Nine)", "Thanos (Marvel)"
+  ],
+  "ISFJ": [
+    "Beyoncé", "Vin Diesel", "Mother Teresa",
+    "Samwise Gamgee (The Lord of the Rings)", "Captain America / Steve Rogers", "Cinderella",
+    "Will Turner (Pirates of the Caribbean)", "Molly Weasley (Harry Potter)"
+  ],
+  "ESTJ": [
+    "Judge Judy", "Frank Sinatra", "James Monroe",
+    "Dwight D. Eisenhower", "M. Bison (Street Fighter)", "Lucy van Pelt (Peanuts)",
+    "Monica Geller (Friends)", "Captain Janeway (Star Trek: Voyager)"
+  ],
+  "ESFJ": [
+    "Bill Clinton", "Tyra Banks", "Jennifer Lopez",
+    "Sansa Stark (Game of Thrones)", "Snow White", "Rachel Green (Friends)",
+    "Hercules (Disney)", "Katara (Avatar: The Last Airbender)"
+  ],
+  "ISTP": [
+    "Clint Eastwood", "Bruce Lee", "Scarlett Johansson",
+    "Arya Stark (Game of Thrones)", "Han Solo (Star Wars)", "Wolverine / Logan",
+    "Lisbeth Salander (The Girl with the Dragon Tattoo)", "James Bond"
+  ],
+  "ISFP": [
+    "Britney Spears", "David Bowie", "Michael Jackson",
+    "Aurora (Sleeping Beauty)", "Legolas (The Lord of the Rings)", "Edward Scissorhands",
+    "Pocahontas", "Finn (Star Wars)"
+  ],
+  "ESTP": [
+    "Ernest Hemingway", "Madonna", "Bruce Willis",
+    "James T. Kirk (Star Trek)", "Lara Croft (Tomb Raider)", "Deadpool",
+    "Flynn Rider (Tangled)", "Merlin (BBC Merlin)"
+  ],
+  "ESFP": [
+    "Elton John", "Miley Cyrus", "Jamie Oliver",
+    "Donkey (Shrek)", "Harley Quinn", "Homer Simpson",
+    "Anna (Frozen)", "Olaf (Frozen)"
+  ]
+}

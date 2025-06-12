@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+*.cache
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.python-version
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# PyCharm and VSCode
+.idea/
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Model & vectorizer
+model/*.pkl
+
+# Uploaded data (if any)
+uploads/
+
+# Secrets
+*.env
+*.secret

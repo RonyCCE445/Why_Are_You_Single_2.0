@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Why Are You Single?{% endblock %}</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Caveat&family=Patrick+Hand&display=swap" rel="stylesheet" />
+
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <!-- 🎯 Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="{{ url_for('index') }}">Why. Are. You. Single</a>
+    </div>
+    <div class="nav-links">
+      <a href="/related_apps">View Related Apps</a>
+      <a href="/about">About the Developer</a>
+        <a href="{{ url_for('how_it_works') }}">How It Works</a>
+    </div>
+  </nav>
+
+  <!-- 🎯 Doodled Background Container -->
+  <div class="background-doodles"></div>
+
+  {% block progress %}
+  <!-- Optional progress bar -->
+  {% endblock %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- 🤡 Doodle Generator -->
+  <script>
+    const doodleTexts = [
+      "404: Personality Not Found",
+      "Certified Red Flag 🧃",
+      "Analyzing your life choices",
+      "This quiz is judging you",
+      "Loading self-awareness… failed",
+      "You can’t ghost yourself 💀",
+      "Your ex was right.",
+      "Just say you're toxic.",
+      "You’re the clown 🤡",
+      "Your MBTI is mid.",
+      "Therapy called. It gave up.",
+      "You're not misunderstood. You're just confusing.",
+      "You’re a walking contradiction.",
+      "Diagnosed with main character delusion.",
+      "Tested positive for emotional damage.",
+      "Screams ‘red flag but quirky’.",
+      "MBTI said ‘try again later’.",
+      "You're not deep. You're just lost.",
+      "Still buffering…",
+      "Even AI said: ‘yikes’.",
+      "You're not a mystery. You're a miscommunication.",
+      "Extroverted? More like extra problematic.",
+      "Replying to your own story energy.",
+      "Unavailable. Emotionally and otherwise.",
+      "MBTI result: 🚩"
+    ];
+
+    const container = document.querySelector('.background-doodles');
+
+    function createDoodle() {
+      const span = document.createElement('span');
+      span.className = 'doodle-text';
+      span.textContent = doodleTexts[Math.floor(Math.random() * doodleTexts.length)];
+      span.style.top = Math.floor(Math.random() * 90) + '%';
+      span.style.left = Math.floor(Math.random() * 90) + '%';
+      span.style.transform = `rotate(${Math.floor(Math.random() * 20 - 10)}deg)`;
+      container.appendChild(span);
+
+      setTimeout(() => {
+        container.removeChild(span);
+      }, 10000);
+    }
+
+    for (let i = 0; i < 10; i++) createDoodle();
+    setInterval(createDoodle, 1500);
+  </script>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

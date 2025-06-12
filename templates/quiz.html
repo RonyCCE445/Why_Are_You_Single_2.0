@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}MBTI Quiz - Why Are You Single?{% endblock %}
+
+{% block content %}
+
+<!-- Progress Bar at the top like a game loader -->
+<div class="progress-wrapper">
+    <div id="progress-bar" style="width: {{ (index / total) * 100 }}%;"></div>
+</div>
+<p id="progress-message">
+    Question {{ index }} of {{ total }} — Installing existential crisis... {{ (index / total * 100) | round(0) }}%
+</p>
+
+<!-- Question text centered like a game -->
+<h2 class="quiz-question">Question {{ index }} of {{ total }}</h2>
+<p class="quiz-text">{{ question.question }}</p>
+
+<!-- Option Buttons (each its own floating UI element) -->
+<form method="POST" id="quiz-form" class="quiz-form">
+    {% for option, value in question.options %}
+        <button class="option-btn" type="submit" name="option" value="{{ value }}">
+            {{ option }}
+        </button>
+    {% endfor %}
+</form>
+
+<!-- Dramatic Exit Option -->
+   <div style="text-align:center; margin-top: 2rem;">
+        <a class="option-btn" href="{{ url_for('index') }}">← I changed my mind</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Your MBTI Result - Why Are You Single?{% endblock %}
+
+{% block content %}
+<div class="result-container">
+    <div class="result-title">
+        <h1>Your Personality Type: {{ mbti }}</h1>
+    </div>
+
+    <div class="result-section">
+        <h2>Sarcastic Summary</h2>
+        <p>{{ fun_paragraph }}</p>
+    </div>
+
+    <div class="result-section">
+        <h2>Traits</h2>
+        <p>{{ traits }}</p>
+    </div>
+
+   <div class="result-section">
+  <h2>Rarity</h2>
+  <p>
+    {{ rarity }}% of the population shares your personality type.
+    <br>
+    That means you're {{ rarity | float <= 2.5 and "basically a unicorn 🦄" or rarity | float >= 10 and "as common as instant noodles 🍜" or "rare-ish... like a discontinued snack 🧃" }}. <br> <br> But remember, they have money and YOU DON'T. Some are even fictious.
+  </p>
+</div>
+
+
+
+    <div class="result-section">
+        <h2>Famous People Like You</h2>
+        <ul>
+            {% for person in famous_people %}
+                <li>{{ person }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="result-actions">
+        <form action="{{ url_for('index') }}">
+            <button type="submit">Try Again</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

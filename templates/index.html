@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Why Are You Single? - MBTI Detector{% endblock %}
+
+{% block content %}
+
+<!-- Toxic Tip Comic Box -->
+<div class="toxic-tip-box" onclick="nextToxicTip()">
+  <span id="toxic-tip"> <span id="toxic-title">☠️ Toxic Tip of the day:
+    </span>
+    Always blame Mercury retrograde.</span>
+</div>
+
+<section class="game-start-screen">
+  <h1 class="title neon-flicker"> Why Are You Single?</h1>
+  <p class="subtitle">
+
+    <em>"I’m not great at the advice. Can I interest you in a sarcastic comment?"</em> – Chandler Bing  
+    <br>
+    <br>
+   I'm an AI, I can find out why they left you. please . PLEASE STOP ANNOYING YOUR FRIEND.
+  </p>
+
+  <div class="game-buttons">
+    <a href="{{ url_for('chat') }}">
+      <button class="option-btn"> I'll Write My Intro</button>
+    </a>
+    <a href="{{ url_for('quiz') }}">
+      <button class="option-btn"> I'm Lazy, Give Me a Quiz</button>
+    </a>
+  </div>
+
+  <p class="snarky-tagline">No refunds. No take-backs. Only judgment.</p>
+</section>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const toxicTips = [
+    "☠️ Toxic Tip of the day: Always blame Mercury retrograde.",
+    "☠️ Toxic Tip of the day: Gaslight yourself before others do.",
+    "☠️ Toxic Tip of the day: Red flags look green when you're desperate.",
+    "☠️ Toxic Tip of the day: If it’s crazy but works, it’s still crazy.",
+    "☠️ Toxic Tip of the day: Crying is cardio. Keep going.",
+    "☠️ Toxic Tip of the day: Screenshot everything. Trust no one.",
+    "☠️ Toxic Tip of the day: You’re not toxic. You’re ‘mysterious’.",
+    "☠️ Toxic Tip of the day: Ghost them before they ghost you.",
+    "☠️ Toxic Tip of the day: Personality? Nah. Just trauma with style."
+  ];
+
+  let currentTip = 0;
+
+  function nextToxicTip() {
+    currentTip = (currentTip + 1) % toxicTips.length;
+    document.getElementById('toxic-tip').textContent = toxicTips[currentTip];
+  }
+</script>
+{% endblock %}
