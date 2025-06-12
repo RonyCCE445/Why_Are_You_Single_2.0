@@ -58,3 +58,6 @@ uploads/
 # Secrets
 *.env
 *.secret
+
+# MBTI Dataset
+data/mbti_1.csv

@@ -8,7 +8,7 @@
 body {
     background-color: #101010; /* Emotional Void */
     color: #cccccc; /* Ghosted Gray */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: 'Courier New', Courier, monospace;
     min-height: 100vh;
     padding: 2rem;
     overflow-x: hidden;
