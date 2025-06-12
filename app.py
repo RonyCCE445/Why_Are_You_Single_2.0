@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import joblib
 import json
 import os
+import sklearn
 
 from quiz import quiz_questions
 
