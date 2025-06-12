@@ -9,4 +9,4 @@ services:
       - key: FLASK_ENV
         value: production
       - key: SECRET_KEY
-        value: "92ee246f8529f6221396907d200d933e8d2a851cc45b7bdb"  # Enclose in quotes
+        sync: false  # This prevents it from being stored in the YAML file

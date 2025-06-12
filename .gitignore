@@ -62,6 +62,5 @@ uploads/
 
 
 
-.env
-render.yaml  # Only if secrets are inside it
+
 
