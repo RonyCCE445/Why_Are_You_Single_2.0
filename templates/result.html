@@ -9,7 +9,7 @@
     </div>
 
     <div class="result-section">
-        <h2>Sarcastic Summary</h2>
+        <h2>So, Here it is : </h2>
         <p>{{ fun_paragraph }}</p>
     </div>
 
@@ -31,6 +31,7 @@
 
     <div class="result-section">
         <h2>Famous People Like You</h2>
+        <p> But remember, Some of them are rich. Others are fictious. You are the superlative degree of both broke and real.</p>
         <ul>
             {% for person in famous_people %}
                 <li>{{ person }}</li>
@@ -38,12 +39,12 @@
 
         </ul>
         <br><br>
-        But remember, Some of them are rich. Others are fictious. You are the superlative degree of both broke and real.
+        You literally just read all the names.. You have way too much free time, don't you?
     </div>
 
     <div class="result-actions">
         <form action="{{ url_for('index') }}">
-            <button type="submit">Try Again</button>
+            <button type="submit">I want to cry Again</button>
         </form>
     </div>
 </div>
