@@ -6,7 +6,7 @@ import os
 from quiz import quiz_questions
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key_here'
+app.secret_key = '92ee246f8529f6221396907d200d933e8d2a851cc45b7bdb'
 
 # Load model and vectorizer
 model = joblib.load('model/mbti_model.pkl')
