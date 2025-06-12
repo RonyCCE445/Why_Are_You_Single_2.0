@@ -65,7 +65,6 @@ print(f"\nAverage CV Accuracy: {np.mean(accuracies):.4f}")
 pipeline.fit(X, y)
 
 # --------- Save model and vectorizer ---------
-joblib.dump(pipeline.named_steps['clf'], 'model/mbti_model.pkl')
-joblib.dump(pipeline.named_steps['tfidf'], 'model/tfidf_vectorizer.pkl')
+joblib.dump(pipeline, 'model/mbti_pipeline.pkl')
 
 print("Model and vectorizer saved!")

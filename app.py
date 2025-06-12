@@ -10,10 +10,10 @@ app = Flask(__name__)
 
 app.secret_key = os.getenv("SECRET_KEY")
 
+# Load full pipeline
+pipeline = joblib.load('model/mbti_pipeline.pkl')
 
-# Load model and vectorizer
-model = joblib.load('model/mbti_model.pkl')
-vectorizer = joblib.load('model/tfidf_vectorizer.pkl')
+
 
 # Load metadata
 with open('data/mbti_traits.json') as f:
@@ -43,8 +43,8 @@ def chat():
             return render_template('chat.html', error="Please write something!")
 
         # Predict MBTI from text
-        X = vectorizer.transform([user_intro])
-        mbti_pred = model.predict(X)[0]
+        mbti_pred = pipeline.predict([user_intro])[0]
+
         session['mbti'] = mbti_pred
         return redirect(url_for('loading'))
 
