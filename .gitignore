@@ -50,7 +50,6 @@ instance/
 Thumbs.db
 
 # Model & vectorizer
-model/*.pkl
 
 # Uploaded data (if any)
 uploads/
